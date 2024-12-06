@@ -4,3 +4,6 @@ class Movie(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
     duration = models.IntegerField()
+
+    def __str__(self):
+        return f"id: {self.id} title: {self.title}"
